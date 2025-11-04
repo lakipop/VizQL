@@ -1,0 +1,30 @@
+{
+  "name": "vizql",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VizQL - Database Query Visualization Tool",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev --host 127.0.0.1",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "chart.js": "^4.4.0",
+    "nuxt": "^3.13.0",
+    "vue": "^3.4.0",
+    "vue-chartjs": "^5.3.0"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.18.0",
+    "@types/node": "^20.11.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.0",
+    "vue-tsc": "^3.1.3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "strict": true,
+    "types": [
+      "@nuxt/types",
+      "@types/node"
+    ]
+  }
+}

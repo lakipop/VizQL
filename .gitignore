@@ -1,0 +1,22 @@
+# VizQL Project
+.git/
+node_modules/
+.nuxt/
+.output/
+dist/
+.env
+*.log
+.DS_Store
+
+# Docker
+docker-compose*.yml
+Dockerfile*
+
+# Documentation
+*.md
+docs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
