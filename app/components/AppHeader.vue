@@ -1,9 +1,9 @@
 <template>
-  <header class="h-full flex items-center justify-between px-4 bg-gray-900">
+  <header class="h-full flex items-center justify-between px-4 bg-zinc-100">
     <!-- Logo/Title -->
     <div class="flex items-center space-x-2">
-      <div class="text-xs text-gray-500">●</div>
-      <h1 class="text-lg font-semibold tracking-tight">
+      <div class="text-xs text-zinc-500">●</div>
+      <h1 class="text-lg font-semibold tracking-tight text-zinc-950">
         <span class="text-yellow-400">Viz</span><span class="text-green-500">QL</span>
       </h1>
     </div>
@@ -22,7 +22,7 @@
       
       <button
         @click="$emit('settings-clicked')"
-        class="header-btn text-gray-400 border-gray-600 hover:bg-gray-700/50"
+        class="header-btn text-zinc-600 border-zinc-400 hover:bg-zinc-200"
       >
         <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -44,8 +44,17 @@ defineEmits<{
 
 <style scoped>
 .header-btn {
-  @apply flex items-center px-2 py-1 text-xs border rounded;
-  @apply transition-all duration-150;
-  @apply focus:outline-none focus:ring-1 focus:ring-yellow-400;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  transition: all 150ms;
+}
+
+.header-btn:focus {
+  outline: 2px solid #e8c547;
+  outline-offset: 2px;
 }
 </style>

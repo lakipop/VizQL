@@ -1,14 +1,14 @@
 <template>
   <aside class="h-full flex flex-col p-3">
-    <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-2">
+    <h2 class="text-xs font-semibold text-zinc-600 uppercase tracking-wider mb-3 px-2">
       Database Schema
     </h2>
     
     <div class="schema-placeholder flex-1">
-      <div class="text-xxs text-gray-600 px-2 space-y-2">
+      <div class="text-xxs text-zinc-500 px-2 space-y-2">
         <p>Connect to a database to view schema</p>
         
-        <div class="mt-4 space-y-1 text-gray-700">
+        <div class="mt-4 space-y-1 text-zinc-400">
           <div class="flex items-center space-x-1">
             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
@@ -44,7 +44,9 @@ defineProps<Props>()
 
 <style scoped>
 .schema-placeholder {
-  @apply border border-dashed border-gray-800 rounded p-3;
-  @apply bg-gray-900/50;
+  border: 1px dashed #d4d4d8;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  background-color: #f4f4f5;
 }
 </style>

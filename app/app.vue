@@ -1,7 +1,7 @@
 <template>
-  <div class="app-container h-screen w-screen overflow-hidden bg-gray-900 text-gray-300">
+  <div class="app-container h-screen w-screen overflow-hidden bg-zinc-950 text-zinc-100">
     <!-- Header -->
-    <div class="header-area border-b border-gray-700">
+    <div class="header-area border-b border-zinc-800">
       <AppHeader 
         @connect-clicked="handleConnect"
         @settings-clicked="handleSettings"
@@ -11,17 +11,17 @@
     <!-- Main Layout: 3 columns -->
     <div class="main-layout">
       <!-- Left Sidebar -->
-      <div class="sidebar-left border-r border-gray-700 bg-gray-900">
+      <div class="sidebar-left border-r border-zinc-800 bg-zinc-100">
         <SidebarLeft @navigate="handleNavigate" />
       </div>
       
       <!-- Main Content Area -->
-      <div class="content-area bg-black overflow-auto">
+      <div class="content-area bg-zinc-950 overflow-auto">
         <NuxtPage />
       </div>
       
       <!-- Right Sidebar -->
-      <div class="sidebar-right border-l border-gray-700 bg-gray-900">
+      <div class="sidebar-right border-l border-zinc-800 bg-zinc-100">
         <SidebarRight />
       </div>
     </div>

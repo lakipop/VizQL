@@ -91,35 +91,61 @@ const toggleView = () => {
 
 <style scoped>
 .page-container {
-  @apply h-full flex flex-col p-4 space-y-4;
-  @apply bg-black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #09090b;
 }
 
 .query-section {
-  @apply h-1/2;
+  height: 50%;
 }
 
 .results-section {
-  @apply flex-1 flex flex-col space-y-2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .results-controls {
-  @apply flex items-center space-x-2 px-1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.25rem;
 }
 
 .view-toggle-btn {
-  @apply flex items-center px-2 py-1 text-xs rounded;
-  @apply border border-gray-700 text-gray-400;
-  @apply hover:bg-gray-800 hover:text-gray-200;
-  @apply transition-all duration-150;
-  @apply focus:outline-none focus:ring-1 focus:ring-yellow-400;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #3f3f46;
+  color: #a1a1aa;
+  transition: all 150ms;
+}
+
+.view-toggle-btn:hover {
+  background-color: #27272a;
+  color: #e4e4e7;
+}
+
+.view-toggle-btn:focus {
+  outline: 2px solid #e8c547;
+  outline-offset: 2px;
 }
 
 .view-toggle-btn.active {
-  @apply bg-yellow-400/10 border-yellow-400 text-yellow-400;
+  background-color: #fef3c7;
+  border-color: #e8c547;
+  color: #ca8a04;
 }
 
 .results-display {
-  @apply flex-1 overflow-hidden;
+  flex: 1;
+  overflow: hidden;
 }
 </style>

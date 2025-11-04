@@ -1,6 +1,6 @@
 <template>
   <aside class="h-full flex flex-col p-3">
-    <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-2">
+    <h2 class="text-xs font-semibold text-zinc-600 uppercase tracking-wider mb-3 px-2">
       Navigation
     </h2>
     
@@ -63,13 +63,27 @@ const IconDashboards = {
 
 <style scoped>
 .nav-item {
-  @apply flex items-center space-x-2 px-2 py-1.5 rounded;
-  @apply text-gray-400 hover:text-gray-200 hover:bg-gray-800;
-  @apply transition-all duration-150;
-  @apply focus:outline-none focus:ring-1 focus:ring-yellow-400;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: 0.25rem;
+  color: #71717a;
+  transition: all 150ms;
+}
+
+.nav-item:hover {
+  color: #18181b;
+  background-color: #e4e4e7;
+}
+
+.nav-item:focus {
+  outline: 2px solid #e8c547;
+  outline-offset: 2px;
 }
 
 .nav-item-active {
-  @apply bg-gray-800 text-yellow-400;
+  background-color: #fef3c7;
+  color: #ca8a04;
 }
 </style>
