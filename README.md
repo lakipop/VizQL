@@ -51,18 +51,52 @@ VizQL aims to be the **go-to open-source alternative** to heavyweight business i
 
 ✅ Complete UI with professional matte design  
 ✅ Query editor with keyboard shortcuts  
-✅ Mock query execution workflow  
+✅ **Live database connections (MySQL)**  
+✅ **Real query execution**  
+✅ **Dynamic schema introspection**  
 ✅ Table and chart visualization toggle  
 ✅ Responsive layout  
 ✅ Hot module replacement (HMR)  
 ✅ TypeScript strict mode  
 ✅ Component auto-import  
+✅ **Error handling and validation**  
+
+---
+
+## 🎯 Current Status
+
+**Phase 1**: ████████████████████ 100% Complete ✅  
+**Phase 2**: ████████████████████ 100% Complete ✅  
+**Overall Project**: ████████░░░░░░░░░░░░ 40% Complete
+
+- ✅ UI/UX Foundation
+- ✅ Component Architecture  
+- ✅ **Database Integration** (NEW!)
+- ✅ **Live Query Execution** (NEW!)
+- ⏳ Advanced Features (Phase 3 - Next)
+- ⏳ Collaboration Tools (Phase 4)
 
 ---
 
 ## 🎯 Roadmap
 
-### Phase 2: Database Integration (Next)
+### ✅ Phase 1: Foundation (Complete)
+- ✅ Professional UI/UX design
+- ✅ 3-column layout with sidebars
+- ✅ Query editor component
+- ✅ Table and chart views
+- ✅ Matte dark theme
+- ✅ Component architecture
+
+### ✅ Phase 2: Database Integration (Complete - NEW!)
+- ✅ Real MySQL connections
+- ✅ Schema introspection and explorer
+- ✅ Live query execution
+- ✅ Connection management UI
+- ✅ Error handling and validation
+- ✅ Server API endpoints
+
+### Phase 3: Advanced Features (Next)
 - [ ] Real MySQL/PostgreSQL connections
 - [ ] Schema introspection and explorer
 - [ ] Live query execution
@@ -118,7 +152,7 @@ cd VizQL
 # Navigate to app directory
 cd app
 
-# Install dependencies
+# Install dependencies (includes mysql2)
 npm install
 
 # Start development server
@@ -127,25 +161,55 @@ npm run dev
 
 **Open your browser**: http://localhost:3000
 
-### Docker Setup (Alternative)
+**Connect to Database**:
+1. Click the **"Connect"** button in the header
+2. Enter your database credentials
+3. Start querying!
+
+### Docker Setup (Recommended)
 
 ```bash
 # Start both app and database
 docker compose up
 
+# Wait for "ready for connections" message
+
 # Access application
 # http://localhost:3000
 ```
 
+**Default Docker Credentials**:
+- Host: `vizql-db`
+- Port: `3306`
+- Database: `vizql_db`
+- User: `vizql_user`
+- Password: `vizql_pass`
+
 ### Try It Out!
-1. Type any SQL query in the editor (it's mock data for now):
+
+1. **Connect**: Click "Connect" button, use Docker credentials
+2. **Create Table** (paste into query editor):
    ```sql
-   SELECT * FROM products WHERE sales > 1000;
+   CREATE TABLE products (
+     id INT PRIMARY KEY AUTO_INCREMENT,
+     name VARCHAR(255),
+     price DECIMAL(10,2),
+     category VARCHAR(100)
+   );
    ```
-2. Click **"Run Query"** or press `Ctrl+Enter`
-3. See results in table format
-4. Click **"Chart"** to visualize as a bar chart
-5. Toggle back to **"Table"** view
+3. **Insert Data**:
+   ```sql
+   INSERT INTO products (name, price, category) VALUES
+     ('Laptop Pro', 1299.99, 'Electronics'),
+     ('Office Desk', 399.99, 'Furniture'),
+     ('Cotton T-Shirt', 19.99, 'Clothing');
+   ```
+4. **Query Data**:
+   ```sql
+   SELECT * FROM products;
+   ```
+5. **Visualize**: Click "Chart" to see bar chart
+6. **Explore**: Check right sidebar for schema
 
 ---
 
@@ -214,22 +278,29 @@ VizQL is in active development! Contributions are welcome.
 
 **Phase 1**: ████████████████████ 100% Complete ✅
 
-**Overall Project**: ████░░░░░░░░░░░░░░░░ 20% Complete
+**Phase 2**: ████████████████████ 100% Complete ✅
+
+**Overall Project**: ████████░░░░░░░░░░░░ 40% Complete
 
 - ✅ UI/UX Foundation
 - ✅ Component Architecture
 - ✅ Mock Data Flow
-- ⏳ Database Integration (Phase 2 - Next)
-- ⏳ Advanced Features (Phase 3)
+- ✅ **Database Integration (Phase 2 - Complete!)**
+- ✅ **Live Query Execution (Phase 2 - Complete!)**
+- ✅ **Schema Explorer (Phase 2 - Complete!)**
+- ⏳ Advanced Features (Phase 3 - Next)
 - ⏳ Collaboration Tools (Phase 4)
 
 ---
 
 ## 📖 Documentation
 
+- **[PHASE 2 Setup](PHASE_2_README.md)** - Get started with live database connections (NEW!)
 - **[Quick Start Guide](QUICKSTART.md)** - Get up and running in 5 minutes
 - **[Development Guide](DEVELOPMENT.md)** - Component API, styling, debugging
-- **[Project Plan](PROJECT_PLAN_PHASE_1.md)** - Detailed Phase 1 specifications
+- **[Phase 1 Plan](PROJECT_PLAN_PHASE_1.md)** - UI foundation specifications
+- **[Phase 2 Plan](.documents/PROJECT_PLAN_PHASE_2.md)** - Database integration guide (NEW!)
+- **[Phase 2 Summary](PHASE_2_SUMMARY.md)** - Implementation summary (NEW!)
 - **[Troubleshooting](TROUBLESHOOTING.md)** - Common issues and solutions
 
 ---

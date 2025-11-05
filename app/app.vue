@@ -2,10 +2,7 @@
   <div class="app-container h-screen w-screen overflow-hidden bg-zinc-950 text-zinc-100">
     <!-- Header -->
     <div class="header-area border-b border-zinc-800">
-      <AppHeader 
-        @connect-clicked="handleConnect"
-        @settings-clicked="handleSettings"
-      />
+      <AppHeader @settings-clicked="handleSettings" />
     </div>
     
     <!-- Main Layout: 3 columns -->
@@ -22,20 +19,19 @@
       
       <!-- Right Sidebar -->
       <div class="sidebar-right border-l border-zinc-800 bg-zinc-100">
-        <SidebarRight />
+        <SidebarRight :schema="schema" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-// Event handlers for header actions
-const handleConnect = () => {
-  console.log('Connect clicked - will implement in Phase 2')
-}
+// Use the connection modal composable to access schema
+const { schema } = useConnectionModal()
 
+// Event handlers
 const handleSettings = () => {
-  console.log('Settings clicked - will implement in Phase 2')
+  console.log('Settings clicked - will implement in Phase 3')
 }
 
 const handleNavigate = (destination: string) => {

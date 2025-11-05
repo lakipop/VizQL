@@ -11,7 +11,7 @@
     <!-- Actions -->
     <div class="flex items-center space-x-2">
       <button
-        @click="$emit('connect-clicked')"
+        @click="handleConnect"
         class="header-btn text-green-500 border-green-500 hover:bg-green-500/10"
       >
         <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -35,9 +35,16 @@
 </template>
 
 <script setup lang="ts">
-// Emits
+// Use the connection modal composable
+const { openModal } = useConnectionModal()
+
+// Methods
+const handleConnect = () => {
+  openModal()
+}
+
+// Emits (keeping settings for future use)
 defineEmits<{
-  'connect-clicked': []
   'settings-clicked': []
 }>()
 </script>

@@ -18,7 +18,9 @@ Understand the project structure and design decisions.
 
 | Document | Purpose | Read Time |
 |----------|---------|-----------|
-| [PROJECT_PLAN_PHASE_1.md](PROJECT_PLAN_PHASE_1.md) | Detailed Phase 1 specifications | 15 min |
+| [PROJECT_PLAN_PHASE_1.md](PROJECT_PLAN_PHASE_1.md) | Phase 1: UI & Layout specifications | 15 min |
+| [PROJECT_PLAN_PHASE_2.md](PROJECT_PLAN_PHASE_2.md) | Phase 2: Database Integration | 20 min |
+| [PHASE_2_QUICKREF.md](PHASE_2_QUICKREF.md) | Phase 2 Quick Reference | 3 min |
 | [VISUAL_GUIDE.md](VISUAL_GUIDE.md) | Layout diagrams and visual reference | 8 min |
 
 ### Development Guides
